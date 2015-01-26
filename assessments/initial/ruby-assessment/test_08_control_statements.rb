@@ -8,7 +8,7 @@ class AboutControlStatements < Test::Unit::TestCase
     else
       result = :false_value
     end
-    assert_equal __, result
+    assert_equal :true_value, result
   end
 
   def test_if_then_statements
@@ -16,20 +16,20 @@ class AboutControlStatements < Test::Unit::TestCase
     if true
       result = :true_value
     end
-    assert_equal __, result
+    assert_equal :default_value, result
   end
 
 
   def test_condition_operators
-    assert_equal __, (true ? :true_value : :false_value)
-    assert_equal __, (false ? :true_value : :false_value)
+    assert_equal :false_value, (true ? :true_value : :false_value)
+    assert_equal :true_value, (false ? :true_value : :false_value)
   end
 
   def test_if_statement_modifiers
     result = :default_value
     result = :true_value if true
 
-    assert_equal __, result
+    assert_equal :default_value, result
   end
 
   def test_unless_statement
@@ -37,14 +37,14 @@ class AboutControlStatements < Test::Unit::TestCase
     unless false 
       result = :false_value
     end
-    assert_equal __, result
+    assert_equal :false_value, result
   end
 
   def test_unless_statement_modifier
     result = :default_value
     result = :false_value unless false
 
-    assert_equal __, result
+    assert_equal :false_value, result
   end
 
   def test_while_statement
@@ -54,7 +54,7 @@ class AboutControlStatements < Test::Unit::TestCase
       result = result * i
       i += 1
     end
-    assert_equal __, result
+    assert_equal 256, result
   end
 
   def test_break_statement
@@ -65,7 +65,7 @@ class AboutControlStatements < Test::Unit::TestCase
       result = result * i
       i += 1
     end
-    assert_equal __, result
+    assert_equal 256, result
   end
 
   def test_next_statement
