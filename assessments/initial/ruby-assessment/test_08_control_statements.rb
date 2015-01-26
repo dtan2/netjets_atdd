@@ -8,7 +8,7 @@ class AboutControlStatements < Test::Unit::TestCase
     else
       result = :false_value
     end
-    assert_equal __, result
+    assert_equal false, result
   end
 
   def test_if_then_statements
@@ -16,7 +16,7 @@ class AboutControlStatements < Test::Unit::TestCase
     if true
       result = :true_value
     end
-    assert_equal __, result
+    assert_equal true , result
   end
 
 
