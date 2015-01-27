@@ -16,10 +16,13 @@ Feature: Dashboard
   Scenario: Events from this day in history
     When I access Wikipedia for my language
     Then I am shown an ordered timeline of historical events for the current date on the dashboard
+    And I can access events from the dashboard
 
   Scenario Outline: More historical events
     When I access Wikipedia for my language
     Then I can access more historical events for <day> from the dashboard
+    And I can access yesterday from the dashboard
+
   Examples:
     |day|
     |yesterday|
