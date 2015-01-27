@@ -1,6 +1,6 @@
-Feature: Flight Scedules
+Feature: Flight Schedules
 
-  Sceanrio: Looking up the daily schedule
+  Scenario: Looking up the daily schedule
     When I look up the daily flight schedule between two cities
     Then I get the daily flight schedule between those cities for that day
     And I get the daily flight schedule between those cities for the previous day
