@@ -39,3 +39,7 @@ end
 Then /^the current value on the screen should be (.*)$/ do |output|
   assert_equal output.to_f, @calc.current_display
 end
+
+And(/^I have cleared the screen$/) do
+  @calc.clear
+end
