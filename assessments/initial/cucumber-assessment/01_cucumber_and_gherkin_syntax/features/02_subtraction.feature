@@ -4,7 +4,7 @@ Feature: Subtraction
   all exist.
 
   Scenario: Subtract several numbers
-    Given I have entered 4 into the __
+    Given I have entered 4 into the _
     And I __ entered 17 into the calculator
     And I have entered 6 __ the calculator
     When I press subtract
@@ -12,7 +12,7 @@ Feature: Subtraction
 
   Scenario Outline: Subtraction properties
     Given I have entered <input_1> into the calculator
-    And I have entered __ into the calculator
+    And I have entered <input_2> into the calculator
     When I press <button>
     Then the result should be <output> __
   Examples:

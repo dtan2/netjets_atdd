@@ -32,10 +32,34 @@ Then /^I should see the previously stored result$/ do
   assert_equal @result, @calc.current_display
 end
 
-When /^I use the special constant __$/ do |special_constant_name|
-  @calc.push_special __
-end
+# When /^I use the special constant __$/ do |special_constant_name|
+#   @calc.push special_constant_name
+# end
 
 Then /^the current value on the screen should be (.*)$/ do |output|
-  assert_equal output.to_f, @calc.current_display
+  assert_equal output.to_f, @contant
+end
+
+When(/^I use the special constant (.*)$/) do |special_constant_name|
+ @contant = @calc.push special_constant_name
+end
+
+And(/^I have cleared the screen$/) do
+  @calc.clear
+end
+
+Given(/^I have entered (\d+) into the _$/) do |num|
+  @calc.push num.to_i
+end
+
+And(/^I __ entered (\d+) into the calculator$/) do |num|
+  @calc.push num.to_i
+end
+
+And(/^I have entered (\d+) __ the calculator$/) do |num|
+  @calc.push num.to_i
+end
+
+Then(/^the result should be (.*) __$/) do |output|
+  assert_equal output.to_f, @result
 end
