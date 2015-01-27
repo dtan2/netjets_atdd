@@ -37,11 +37,11 @@ end
 # end
 
 Then /^the current value on the screen should be (.*)$/ do |output|
-  assert_equal output.to_f, @contant
+  assert_equal output.to_f, @val
 end
 
 When(/^I use the special constant (.*)$/) do |special_constant_name|
- @contant = @calc.push special_constant_name
+ @val = @calc.push special_constant_name
 end
 
 And(/^I have cleared the screen$/) do
