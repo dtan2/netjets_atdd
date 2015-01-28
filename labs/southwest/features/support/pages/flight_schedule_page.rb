@@ -1,10 +1,12 @@
 class FlightSchedulePage
-
   include PageObject
+
   link(:flight_schedule,:class=>'swa-footer--item',:text=>'Flight Schedules')
   text_field(:departure_airport,:class=>'stationInput  ac_input',:index=>0)
   text_field(:arrival_airport,:class=>'stationInput  ac_input',:index=>1)
+  button(:search,:id=>'flightSchedulesForm_submitButton')
   div(:calender,:id=>'ui-datepicker-div')
+  div(:form,:class=>'swa_forms_footer')
   divs(:airport_results,:class=>'ac_results')
 
 
@@ -26,6 +28,12 @@ class FlightSchedulePage
   def close_calender
     wait_until{self.calender_element.visible?}
     self.calender_element.span_element(:class=>'close_link').click
+  end
+
+
+
+  def search_button
+    self.search_element.click
   end
 
 

@@ -6,11 +6,16 @@ When(/^I look up the daily flight schedule between two cities$/) do
  page.enter_departure_airport 'EWR'
  page.enter_arrival_airport 'LAX'
  page.close_calender
+ page.search_button
+
+end
+on(ScheduleResultsPage) do |page|
+  data=page.gather_schedule
+  puts data
 end
 
-# entering arrival_airport
-# select today_date
-# search
+
+
 end
 
 
