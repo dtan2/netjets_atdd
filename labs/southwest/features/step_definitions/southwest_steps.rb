@@ -1,5 +1,5 @@
 When(/^I look up the daily flight schedule between two cities$/) do
-  visit_page HomePage
+  goto_web_site
 
   on(FlightSchedulePage) do |page|
  page.flight_schedule
