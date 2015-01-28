@@ -1,4 +1,5 @@
-include PageObject::PageFactory
+
+
 class HomePage
   include PageObject
 
