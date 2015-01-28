@@ -1,5 +1,6 @@
 require 'watir-webdriver'
 require 'page-object'
+include PageObject::PageFactory
 
 Before do |scenario|
 @browser = Watir::Browser.new :firefox
