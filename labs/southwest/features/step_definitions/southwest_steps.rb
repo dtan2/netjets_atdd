@@ -10,8 +10,7 @@ When(/^I look up the daily flight schedule between two cities$/) do
 
 end
 on(ScheduleResultsPage) do |page|
-  data=page.gather_schedule
-  puts data
+  @data=page.gather_schedule
 end
 
 
@@ -31,6 +30,6 @@ And(/^I get the daily flight schedule between those cities for the previous day$
 end
 
 Then(/^I get the daily flight schedule between those cities for that day$/) do
+@data
 
-  # get daily flight_schedule
 end

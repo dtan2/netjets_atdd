@@ -1,11 +1,13 @@
 Feature: Bank account overdraft
 
-  Background: I have login into the bank web site
+  Background:
+  Given I login into the bank web site
+
 
   Scenario: view over draft amount
-    Given: I have a checking account
+    Given I have a checking account
     When I want my overdraft amount
-    Then the overdraft amount is '$1000'
+    Then the overdraft amount is "$1000"
 
   Scenario: user has the ability to turn on the overdraft
     When I turn on my overdraft

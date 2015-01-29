@@ -2,7 +2,7 @@ Feature: Flight Schedules
 
   Scenario: Looking up the daily schedule
     When I look up the daily flight schedule between two cities
-#    Then I get the daily flight schedule between those cities for that day
+    Then I get the daily flight schedule between those cities for that day
 #    And I get the daily flight schedule between those cities for the previous day
 #    And I get the daily flight schedule between those cities for the next day
   
