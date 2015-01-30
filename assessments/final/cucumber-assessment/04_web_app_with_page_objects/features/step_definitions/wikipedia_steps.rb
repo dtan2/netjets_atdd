@@ -5,12 +5,14 @@ require 'test/unit'
 
 include PageObject::PageFactory
 
-When(/^I access Wikipedia for my language$/) do
-  visit_page WikipediaHome do |page|
-    language = Locale.current.language
-    page.goto_language_home(language)
-  end
-end
+# When(/^I access Wikipedia for my language$/) do
+#   visit_page WikipediaHome
+#
+#   on(WikipediaHome)do |page|
+#     language = Locale.current.language
+#     page.goto_language_home(language)
+#   end
+# end
 
 Then /^I am shown a summary of a featured article on the dashboard$/ do
   on_page WikipediaDashboard do |page|
