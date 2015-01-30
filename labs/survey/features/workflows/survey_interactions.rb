@@ -5,11 +5,7 @@ module SurveyInteractions
   end
 
   def submit_valid_survey_info
-    on_page Survey do |page|
-      page.name = 'your name'
-      page.language = 'Ruby'
-      page.submit
-    end
+    on_page(Survey).enter_some_page_info('your name','Ruby')
     sleep 2
   end
 
