@@ -8,5 +8,5 @@ end
 
 After do |scenario|
   @browser.close
-  Test.makeingit
+  Test.home_work.2
 end
